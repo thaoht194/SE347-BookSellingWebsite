@@ -1,0 +1,20 @@
+[
+  { "name": "Nghệ thuật & Kiến trúc", "path": "/Categogies/1" },
+  { "name": "Tiểu sử & Hồi kí", "path": "/Categogies/2" },
+  { "name": "Kinh doanh", "path": "/Categogies/3" },
+  { "name": "Máy tính & Công nghệ", "path": "/Categogies/4" },
+  { "name": "Nấu ăn", "path": "/Categogies/5" },
+  { "name": "Giáo dục", "path": "/Categogies/6" },
+  { "name": "Gia đình", "path": "/Categogies/7" },
+  { "name": "Lịch sử", "path": "/Categogies/8" },
+  { "name": "Kinh dị", "path": "/Categogies/9" },
+  { "name": "Y tế", "path": "/Categogies/10" },
+  { "name": "Bí ản & Kinh dị", "path": "/Categogies/11" },
+  { "name": "Khoa học chính trị", "path": "/Categogies/12" },
+  { "name": "Tâm lý", "path": "/Categogies/13" },
+  { "name": "Tôn giáo", "path": "/Categogies/14" },
+  { "name": "Khoa học viễn tưởng", "path": "/Categogies/15" },
+  { "name": "Khoa học xã hội", "path": "/Categogies/16" },
+  { "name": "Thể thao giải trí", "path": "/Categogies/17" },
+  { "name": "Du lịch", "path": "/Categogies/18" }
+]

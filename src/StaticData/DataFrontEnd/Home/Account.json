@@ -1,0 +1,22 @@
+[
+  {
+    "id": "ACC1",
+    "email": "account1@gmail.com",
+    "pass": "Acc1@1234",
+    "username": "Người dùng 1",
+    "fullname": "Đỗ Mỹ Lệ",
+    "gender": "female",
+    "birthday": "2002-10-01T00:00:00.000-0700",
+    "phone": "0983748374"
+  },
+  {
+    "id": "ACC2",
+    "email": "account2@gmail.com",
+    "pass": "Acc2@1234",
+    "username": "Người dùng 2",
+    "fullname": "Nguyễn Bá Nam",
+    "gender": "male",
+    "birthday": "2001-09-23T00:00:00.000-0700",
+    "phone": "0382768273"
+  }
+]

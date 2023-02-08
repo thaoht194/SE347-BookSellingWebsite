@@ -1,16 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  darkMode: "class",
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
-    screens: {
-      sm: { min: "640px", max: "780px" },
-      md: { min: "781px", max: "1023px" },
-      lg: { min: "1024px", max: "1280px" },
+    extend: {
+      lineClamp: {
+        7: "7",
+        8: "8",
+        9: "9",
+        10: "10",
+      },
     },
   },
-  plugins: [
-    require("@tailwindcss/line-clamp"),
-    // ...
-  ],
+  variants: {
+    lineClamp: ["responsive", "hover"],
+  },
+  plugins: [require("@tailwindcss/line-clamp")],
 };
