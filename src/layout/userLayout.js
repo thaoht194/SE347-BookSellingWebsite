@@ -41,14 +41,12 @@ export const Layout = () => {
             <Footer />
           </div>
           {isBackToTop && (
-            <div className="flex justify-end pr-10 sticky top-0 z-10 bottom-20 collapse">
-              <button
-                className="rounded-full p-2 text-xl md:p-3 md:text-3xl text-gray-400 bg-gray-200 opacity-60"
-                onClick={scrollTop}
-              >
-                <AiOutlineUp />
-              </button>
-            </div>
+            <button
+              className="rounded-full p-2 text-xl md:p-3 md:text-3xl text-gray-500 bg-gray-300 opacity-60 fixed z-10 right-5 bottom-5 md:bottom-10 md:right-10"
+              onClick={scrollTop}
+            >
+              <AiOutlineUp />
+            </button>
           )}
         </div>
       </div>

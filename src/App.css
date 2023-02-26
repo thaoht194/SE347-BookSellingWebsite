@@ -1,3 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+.ant-segmented-item-selected {
+  background-color: transparent !important;
+  color: #15803d !important;
+}
+
 .App {
   text-align: center;
 }

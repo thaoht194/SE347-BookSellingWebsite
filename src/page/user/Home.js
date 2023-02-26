@@ -6,13 +6,41 @@ import BestSellingTop from "../../StaticData/DataFrontEnd/Home/BestSellingTop.js
 import Authors from "../../StaticData/DataFrontEnd/Home/Author.json";
 import Found from "../../StaticData/DataFrontEnd/Home/Found.json";
 import "react-tooltip/dist/react-tooltip.css";
-import { Rate, Space, Tooltip } from "antd";
+import { Rate, Segmented, Space, Tooltip } from "antd";
 import { Link } from "react-router-dom";
 import { BsCartPlus } from "react-icons/bs";
 import { useBackendVariable } from "./Backend/BackendVariable";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, A11y, Manipulation } from "swiper";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
+import "swiper/css";
+import "swiper/css/manipulation";
 
 export const Home = (props) => {
   const backendVariable = useBackendVariable();
+  const categoriesList = [
+    {
+      label: "Bán chạy nhất",
+      value: 0,
+    },
+    {
+      label: "Kỹ năng - Selfhelp",
+      value: 1,
+    },
+    {
+      label: "Kinh tế",
+      value: 2,
+    },
+    {
+      label: "Kinh điển",
+      value: 3,
+    },
+    {
+      label: "Trinh thám",
+      value: 4,
+    },
+  ];
   return (
     <>
       {/* Banner ở đây*/}
@@ -49,11 +77,17 @@ export const Home = (props) => {
           </div>
 
           {/* Danh mục sách mới phát hành */}
-          <div className="w-full box-border flex flex-row justify-between gap-10 overflow-hidden p-5">
+          <Swiper
+            slidesPerView={10}
+            loop={true}
+            modules={[Navigation, A11y, Manipulation]}
+            navigation
+            Manipulation
+          >
             {BestSelling &&
               BestSelling.map((item) => {
                 return (
-                  <div className="min-w-[200px] flex flex-col gap-1 p-2 hover:shadow-xl hover:cursor-pointer">
+                  <SwiperSlide className="min-w-[200px] flex flex-col p-2 m-1 hover:shadow-xl hover:cursor-pointer rounded-md">
                     <Link
                       to={`/Product/Detail/${item.id}`}
                       state={{ Product: item }}
@@ -114,10 +148,10 @@ export const Home = (props) => {
                     <button className="font-bold bg-green-700 text-white rounded-md py-2 whitespace-nowrap flex justify-center hover:opacity-80">
                       <BsCartPlus className="text-white text-2xl" />
                     </button>
-                  </div>
+                  </SwiperSlide>
                 );
               })}
-          </div>
+          </Swiper>
 
           <div className="flex flex-col md:flex-row gap-10 mt-5">
             <div className="grid grid-rows-2 grow min-w-fit">
@@ -196,23 +230,14 @@ export const Home = (props) => {
               {/* Navigation */}
               <div className="w-full box-border flex justify-end items-center text-gray-600  font-semibold">
                 <div className="mr-auto">ĐƯỢC TÌM KIẾM NHIỀU NHẤT</div>
-                <div className="flex grid grid-flow-col lg:grid-cols-1 lg:grid-rows-1 md:grid-cols-3 md:grid-rows-2 md:gap-1">
-                  <div className="inline-block hover:text-green-800 hover:underline ml-3 cursor-pointer">
-                    Bán chạy nhất
-                  </div>
-                  <div className="inline-block hover:text-green-800 hover:underline ml-3 cursor-pointer">
-                    Kỹ năng - Selfhelp
-                  </div>
-                  <div className="inline-block hover:text-green-800 hover:underline ml-3 cursor-pointer">
-                    Kinh tế
-                  </div>
-                  <div className="inline-block hover:text-green-800 hover:underline ml-3 cursor-pointer">
-                    Kinh điển
-                  </div>
-                  <div className="inline-block hover:text-green-800 hover:underline ml-3 cursor-pointer">
-                    Trinh thám
-                  </div>
-                </div>
+                <Segmented
+                  size="large"
+                  defaultValue={0}
+                  options={categoriesList}
+                  onChange={(value) => {
+                    console.log("Value of category: ", value);
+                  }}
+                />
               </div>
 
               {/* Được tìm kiếm nhiều nhất */}

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.50762ae8.css",
+    "main.js": "/static/js/main.1d030f1b.js",
+    "static/js/787.436a1efc.chunk.js": "/static/js/787.436a1efc.chunk.js",
+    "static/media/dinob_logo.png": "/static/media/dinob_logo.641809c5529def45f35e.png",
+    "static/media/dinobb.png": "/static/media/dinobb.0f25828587fd7cc2acf1.png",
+    "index.html": "/index.html",
+    "main.50762ae8.css.map": "/static/css/main.50762ae8.css.map",
+    "main.1d030f1b.js.map": "/static/js/main.1d030f1b.js.map",
+    "787.436a1efc.chunk.js.map": "/static/js/787.436a1efc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.50762ae8.css",
+    "static/js/main.1d030f1b.js"
+  ]
+}
